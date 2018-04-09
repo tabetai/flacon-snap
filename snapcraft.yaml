@@ -1,5 +1,5 @@
 name: flacon-tabetai
-version: '3.1.1'
+version: '4.0.0'
 summary: Flacon snap
 description: |
   Flacon extracts individual tracks from one big audio file containing the entire album of music 
@@ -39,7 +39,7 @@ parts:
            - cuetools
            - python-mutagen
     install: |
-      sed -i 's|Icon=flacon|Icon=${SNAP}/usr/share/icons/hicolor/48x48/apps/flacon.png|g' $SNAPCRAFT_PART_INSTALL/usr/share/applications/flacon.desktop
+      sed -i 's|Icon=flacon|Icon=${SNAP}/usr/share/icons/hicolor/512x512/apps/flacon.png|g' $SNAPCRAFT_PART_INSTALL/usr/share/applications/flacon.desktop
     after: [desktop-qt5]
   faac:
      source: https://github.com/Arcen/faac.git
