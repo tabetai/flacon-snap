@@ -1,0 +1,61 @@
+name: flacon-tabetai
+version: '3.1.1'
+summary: Flacon snap
+description: |
+  Flacon extracts individual tracks from one big audio file containing the entire album of music 
+  and saves them as separate audio files.
+grade: stable
+confinement: strict
+
+apps:
+  flacon:
+    command: desktop-launch flacon
+    plugs: [unity7, x11, opengl, gsettings, home, removable-media, raw-usb]
+    desktop: usr/share/applications/flacon.desktop
+  
+parts:
+  flacon:
+    source: https://github.com/flacon/flacon/archive/v4.0.0.tar.gz
+    plugin: cmake
+    configflags:
+          - -DCMAKE_INSTALL_PREFIX=/usr
+    build-packages:
+           - pkg-config
+           - qtbase5-dev
+           - qttools5-dev-tools
+           - libuchardet-dev
+           - icu-devtools
+    stage-packages:      
+           - flac
+           - wavpack
+           - lame
+           - libvorbis0a
+           - libogg0
+           - libopus0
+           - vorbis-tools
+           - opus-tools
+           - vorbisgain
+           - shntool
+           - cuetools
+           - python-mutagen
+    install: |
+      sed -i 's|Icon=flacon|Icon=${SNAP}/usr/share/icons/hicolor/48x48/apps/flacon.png|g' $SNAPCRAFT_PART_INSTALL/usr/share/applications/flacon.desktop
+    after: [desktop-qt5]
+  faac:
+     source: https://github.com/Arcen/faac.git
+     plugin: autotools
+  ttaenc:
+    source: https://sourceforge.net/projects/tta/files/tta/ttaenc-src/ttaenc-3.4.1-src.tgz
+    plugin: make
+    artifacts: [ttaenc]
+    organize:  
+            ttaenc: bin/
+  mp3gain:
+    source: https://sourceforge.net/projects/mp3gain/files/mp3gain/1.5.2/mp3gain-1_5_2_r2-src.zip
+    plugin: make
+    artifacts: [mp3gain]
+    organize: 
+            mp3gain: bin/
+  mac:
+    source: https://github.com/fernandotcl/monkeys-audio.git
+    plugin: cmake
