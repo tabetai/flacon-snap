@@ -1,5 +1,5 @@
 name: flacon-tabetai
-version: '4.0.0'
+version: '4.1.0'
 summary: Flacon snap
 description: |
   Flacon extracts individual tracks from one big audio file containing the entire album of music 
