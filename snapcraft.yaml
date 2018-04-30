@@ -15,7 +15,7 @@ apps:
   
 parts:
   flacon:
-    source: https://github.com/flacon/flacon/archive/v4.0.0.tar.gz
+    source: https://github.com/flacon/flacon/archive/v4.1.0.tar.gz
     plugin: cmake
     configflags:
           - -DCMAKE_INSTALL_PREFIX=/usr
