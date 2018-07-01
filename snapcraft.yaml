@@ -20,12 +20,18 @@ parts:
     configflags:
           - -DCMAKE_INSTALL_PREFIX=/usr
     build-packages:
+           - g++
            - pkg-config
+           - libqt5x11extras5-dev
            - qtbase5-dev
+           - qttools5-dev
            - qttools5-dev-tools
            - libuchardet-dev
            - icu-devtools
-    stage-packages:      
+    stage-packages:
+           - dbus
+           - libqt5x11extras5
+           - qttranslations5-l10n
            - flac
            - wavpack
            - lame
