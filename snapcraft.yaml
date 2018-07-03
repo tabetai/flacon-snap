@@ -19,8 +19,6 @@ parts:
     plugin: cmake
     configflags:
           - -DCMAKE_INSTALL_PREFIX=/usr
-          - -DCMAKE_LIBRARY_PATH=/opt/flacon-libs/lib/x86_64-linux-gnu
-          - -DCMAKE_INCLUDE_PATH=/opt/flacon-libs/include
     build-packages:
            - g++
            - pkg-config
@@ -49,10 +47,6 @@ parts:
            - libxkbcommon0
     install: |
       sed -i 's|Icon=flacon|Icon=${SNAP}/usr/share/icons/hicolor/512x512/apps/flacon.png|g' $SNAPCRAFT_PART_INSTALL/usr/share/applications/flacon.desktop
-    organize:
-      usr/share/qt5/translations/*.qm: usr/share/flacon/translations/
-      opt/flacon-libs/lib/x86_64-linux-gnu/*: usr/lib/x86_64-linux-gnu/
-      opt/flacon-libs/share/locale/*: usr/share/locale/
     after: [desktop-qt5]
   
   faac:
