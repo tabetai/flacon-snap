@@ -45,7 +45,6 @@ parts:
            - cuetools
            - python-mutagen
            - libxkbcommon0
-           - qt5-gtk-platformtheme
     install: |
       sed -i 's|Icon=flacon|Icon=${SNAP}/usr/share/icons/hicolor/512x512/apps/flacon.png|g' $SNAPCRAFT_PART_INSTALL/usr/share/applications/flacon.desktop
     after: [desktop-qt5]
