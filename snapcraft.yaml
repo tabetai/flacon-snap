@@ -45,6 +45,14 @@ parts:
            - cuetools
            - python-mutagen
            - libxkbcommon0
+           - ttf-ubuntu-font-family
+           - dmz-cursor-theme
+           - light-themes
+           - shared-mime-info
+           - libqt5gui5
+           - libgdk-pixbuf2.0-0
+           - libqt5svg5
+           - appmenu-qt5
     install: |
       sed -i 's|Icon=flacon|Icon=${SNAP}/usr/share/icons/hicolor/512x512/apps/flacon.png|g' $SNAPCRAFT_PART_INSTALL/usr/share/applications/flacon.desktop
     after: [desktop-qt5]
