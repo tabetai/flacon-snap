@@ -53,6 +53,7 @@ parts:
            - libcanberra-gtk-module
            - ttf-ubuntu-font-family
            - fonts-dejavu
+           - sox
     install: |
       sed -i 's|Icon=flacon|Icon=${SNAP}/usr/share/icons/hicolor/512x512/apps/flacon.png|g' $SNAPCRAFT_PART_INSTALL/usr/share/applications/flacon.desktop
     after: [desktop-qt5]
