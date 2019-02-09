@@ -10,7 +10,7 @@ confinement: strict
 apps:
   flacon:
     command: desktop-launch flacon
-    plugs: [unity7, x11, opengl, gsettings, home, removable-media, raw-usb, desktop-legacy, desktop]
+    plugs: [unity7, x11, opengl, gsettings, home, removable-media, raw-usb, desktop-legacy, desktop, kde-frameworks-5-plug]
     desktop: usr/share/applications/flacon.desktop
   
 parts:
