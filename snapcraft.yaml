@@ -33,6 +33,9 @@ parts:
            - libqt5x11extras5
            - qttranslations5-l10n
            - libflac8
+           - libvorbisenc2
+           - libflac++6v5
+           - flac
            - wavpack
            - lame
            - libvorbis0a
