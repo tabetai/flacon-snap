@@ -32,7 +32,7 @@ parts:
            - dbus
            - libqt5x11extras5
            - qttranslations5-l10n
-           - flac
+           - libflac8
            - wavpack
            - lame
            - libvorbis0a
