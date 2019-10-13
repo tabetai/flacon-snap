@@ -11,7 +11,7 @@ apps:
   flacon:
     command: desktop-launch flacon
     plugs: [unity7, x11, opengl, gsettings, home, removable-media, raw-usb, desktop-legacy, desktop]
-    desktop: usr/share/applications/flacon.desktop
+    desktop: share/applications/flacon.desktop
   
 parts:
   flacon:
