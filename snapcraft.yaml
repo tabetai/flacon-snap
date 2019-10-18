@@ -80,3 +80,5 @@ parts:
   flac:
     source: http://deb.debian.org/debian/pool/main/f/flac/flac_1.3.3.orig.tar.xz
     plugin: autotools
+    organize:
+             flac: usr/bin/
