@@ -30,10 +30,7 @@ parts:
            - dbus
            - libqt5x11extras5
            - qttranslations5-l10n
-           - libflac8
            - libvorbisenc2
-           - libflac++6v5
-           - flac
            - wavpack
            - lame
            - libvorbis0a
@@ -78,3 +75,8 @@ parts:
   mac:
     source: https://github.com/fernandotcl/monkeys-audio.git
     plugin: cmake
+    organize:
+            mac: bin/
+  flac:
+    source: http://deb.debian.org/debian/pool/main/f/flac/flac_1.3.3.orig.tar.xz
+    plugin: autotools
